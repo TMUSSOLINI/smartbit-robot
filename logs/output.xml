@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5 (Python 3.12.3 on linux)" generated="2026-10-08T00:06:08.812832" rpa="false" schemaversion="5">
+<suite id="s1" name="Hello" source="/home/thiago/QAx/projects/smartbit-robot/tests/hello.robot">
+<test id="s1-t1" name="Deve mostrar mensagem de boas-vindas" line="7">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-10-08T00:06:08.847582" level="INFO">Olá, Robô!</msg>
+<arg>Olá, Robô!</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-10-08T00:06:08.847016" elapsed="0.000697"/>
+</kw>
+<status status="PASS" start="2026-10-08T00:06:08.846161" elapsed="0.001829"/>
+</test>
+<doc>Hello Robot</doc>
+<status status="PASS" start="2026-10-08T00:06:08.813878" elapsed="0.034553"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Hello" id="s1" pass="1" fail="0" skip="0">Hello</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
