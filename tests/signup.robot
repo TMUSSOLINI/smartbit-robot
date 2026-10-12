@@ -14,3 +14,7 @@ Deve iniciar o cadastro do cliente
     Fill Text      id=email       TEste@teste.com
     Fill Text      id=document    12345678900
     Click          text=//button[text()="Cadastrar"]
+
+    Wait For Elements State    text=Falta pouco para fazer parte da familia Smartbit!    visible    5
+    
+
