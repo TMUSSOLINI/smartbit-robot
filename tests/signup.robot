@@ -3,18 +3,17 @@ Documentation       Cenários de testes de pré-cadastro de clientes
 
 Resource    ../resources/Base.resource
 
+Test Setup       Start session
+Test Teardown    Take Screenshot
 
 *** Test Cases ***
 Deve iniciar o cadastro do cliente
 
     ${account}    Get Fake Account
 
-    Start session
     Submit signup form    ${account}
     Verify welcome message
-    Take Screenshot
     
-
 Campo nome deve ser obrigatorio
     [Tags]    required
 
@@ -23,11 +22,8 @@ Campo nome deve ser obrigatorio
     ...    email=thiago@thiago.com
     ...    cpf=12345678990
 
-    Start session
     Submit signup form    ${account}
-
     Notice should be    Por favor informe o seu nome completo
-    Take Screenshot
 
 Campo email deve ser obrigatorio
     [Tags]    required
@@ -37,11 +33,8 @@ Campo email deve ser obrigatorio
     ...    email=${EMPTY}
     ...    cpf=12345678990
 
-    Start session
     Submit signup form    ${account}
-
     Notice should be    Por favor informe o seu melhor email
-    Take Screenshot
 
 Campo cpf deve ser obrigatorio
     [Tags]    required
@@ -51,11 +44,8 @@ Campo cpf deve ser obrigatorio
     ...    email=thiago@thiago.com
     ...    cpf=${EMPTY}
 
-    Start session
     Submit signup form    ${account}
-
     Notice should be    Por favor informe o seu CPF
-    Take Screenshot
 
 Email no formato incorreto
     [Tags]    invalido
@@ -65,11 +55,8 @@ Email no formato incorreto
     ...    email=thiago*thiago.com
     ...    cpf=12345678990
 
-    Start session
     Submit signup form    ${account}
-
     Notice should be    Oops! O email informado é invalido
-    Take Screenshot
 
 CPF no formato incorreto
     [Tags]    invalido
@@ -79,10 +66,5 @@ CPF no formato incorreto
     ...    email=thiago@thiago.com
     ...    cpf=1234567899a
 
-    Start session
     Submit signup form    ${account}
-
-    Notice should be   Oops! O CPF informado é invalido 
-    Take Screenshot
-  
-
+    Notice should be   Oops! O CPF informado é invalido
