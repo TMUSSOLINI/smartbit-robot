@@ -11,7 +11,9 @@ Deve iniciar o cadastro do cliente
 
     Start session
     Submit signup form    ${account}
-    Verify welcome message    
+    Verify welcome message
+    Take Screenshot
+    
 
 Campo nome deve ser obrigatorio
     [Tags]    required
@@ -25,6 +27,7 @@ Campo nome deve ser obrigatorio
     Submit signup form    ${account}
 
     Notice should be    Por favor informe o seu nome completo
+    Take Screenshot
 
 Campo email deve ser obrigatorio
     [Tags]    required
@@ -38,6 +41,7 @@ Campo email deve ser obrigatorio
     Submit signup form    ${account}
 
     Notice should be    Por favor informe o seu melhor email
+    Take Screenshot
 
 Campo cpf deve ser obrigatorio
     [Tags]    required
@@ -51,6 +55,7 @@ Campo cpf deve ser obrigatorio
     Submit signup form    ${account}
 
     Notice should be    Por favor informe o seu CPF
+    Take Screenshot
 
 Email no formato incorreto
     [Tags]    invalido
@@ -64,6 +69,7 @@ Email no formato incorreto
     Submit signup form    ${account}
 
     Notice should be    Oops! O email informado é invalido
+    Take Screenshot
 
 CPF no formato incorreto
     [Tags]    invalido
@@ -77,5 +83,6 @@ CPF no formato incorreto
     Submit signup form    ${account}
 
     Notice should be   Oops! O CPF informado é invalido 
+    Take Screenshot
   
 
