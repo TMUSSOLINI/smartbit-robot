@@ -27,3 +27,14 @@ Notice should be
     ...    5
 
     Get Text    ${element}    equal    ${target}
+
+
+Attempt signup
+    [Arguments]    ${name}    ${email}    ${cpf}    ${output_message}
+    ${account}    Create Dictionary
+    ...    name=${name}
+    ...    email=${email}
+    ...    cpf=${cpf}
+
+    Submit signup form    ${account}
+    Notice should be   ${output_message}

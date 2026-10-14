@@ -68,3 +68,12 @@ CPF no formato incorreto
 
     Submit signup form    ${account}
     Notice should be   Oops! O CPF informado é invalido
+
+Testando cenários invalidos
+    [Template]    Attempt signup
+    ${EMPTY}       thiago@thiago.com    12345678990    Por favor informe o seu nome completo
+    Thiago Muss    ${EMPTY}             12345678990    Por favor informe o seu melhor email
+    Thiago Muss    thiago@thiago.com    ${EMPTY}       Por favor informe o seu CPF
+    Thiago Muss    thiago&thiago.com    12345678990    Oops! O email informado é invalido
+    Thiago Muss    thiago@thiago.com    1234567899a    Oops! O CPF informado é invalido
+
