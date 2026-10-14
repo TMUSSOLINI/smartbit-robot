@@ -11,12 +11,7 @@ Deve iniciar o cadastro do cliente
 
     Start session
     Submit signup form    ${account}
-
-
-    Wait For Elements State    
-    ...    text=Falta pouco para fazer parte da familia Smartbit!    
-    ...    visible    
-    ...    5
+    Verify welcome message    
 
 Campo nome deve ser obrigatorio
     [Tags]    required
