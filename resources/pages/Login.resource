@@ -16,4 +16,3 @@ Submit login form
 
     Click        css=button >> text=Entrar
 
-

@@ -4,7 +4,6 @@ Documentation    Ações e elementos da Landing Page
 Library    Browser
 
 *** Keywords ***
-
 Submit signup form
     [Arguments]    ${account}
     Get Text
@@ -17,16 +16,6 @@ Submit signup form
     Fill Text      id=document    ${account}[document]
     Click          text=//button[text()="Cadastrar"]
     
-Notice should be
-    [Arguments]    ${target}
-
-    ${element}    Set Variable    css=form .notice 
-    Wait For Elements State    
-    ...      ${element}
-    ...    visible    
-    ...    5
-
-    Get Text    ${element}    equal    ${target}
 
 
 Attempt signup

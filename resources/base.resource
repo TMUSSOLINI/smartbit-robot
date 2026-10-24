@@ -8,6 +8,7 @@ Resource    pages/Welcome.resource
 Resource    pages/Login.resource
 Resource    pages/Accounts.resource
 Resource    pages/components/Toast.resource
+Resource    pages/components/BoxNotice.resource
 
 *** Keywords ***
 Start session
