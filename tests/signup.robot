@@ -8,8 +8,14 @@ Test Teardown    Take Screenshot
 
 *** Test Cases ***
 Deve iniciar o cadastro do cliente
+    [Tags]    smoke
 
-    ${account}    Get Fake Account
+    ${account}    Create Dictionary
+    ...    name=Thiago Mussolini
+    ...    email=teste@teste.com
+    ...    cpf=12345678991
+
+    Delete Account By Email    ${account}[email]
 
     Submit signup form    ${account}
     Verify welcome message
