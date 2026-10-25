@@ -14,6 +14,8 @@ Deve poder realziar uma nova adesão
     User is logged in    sac@smartbit.com
     Go to Erolls
     Go to enroll form
+    Select account    Thiago Mussolini    CPF
+    
 
     
     
@@ -29,3 +31,9 @@ Go to enroll form
     Click    css=a[href="/memberships/new"]
     Wait For Elements State    css=h1 >> text=Nova matrícula
     ...    visible    5
+
+Select account
+    [Arguments]    ${name}    ${cpf}
+
+    Fill Text    css=input[aria-label=select_account]    ${name}
+    Click    css=[data-testid="${cpf}"]
