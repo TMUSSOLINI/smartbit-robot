@@ -15,9 +15,9 @@ Deve poder realziar uma nova adesão
     Go to Erolls
     Go to enroll form
     Select account    Thiago Mussolini    CPF
-    
 
-    
+    Fill Text    css=input[aria-label=select_plan]    Plano Black
+    Click    css=div[id*=option] >> text=Plano Black
     
 
 *** Keywords ***
