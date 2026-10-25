@@ -13,6 +13,9 @@ Deve poder realziar uma nova adesão
     Submit login form    sac@smartbit.com    pwd123
     User is logged in    sac@smartbit.com
     Go to Erolls
+    Go to enroll form
+
+    
     
 
 *** Keywords ***
@@ -20,4 +23,9 @@ Deve poder realziar uma nova adesão
 Go to Erolls
     Click    css=a[href="/memberships"]
     Wait For Elements State    css=h1 >> text=Matrículas
+    ...    visible    5
+
+Go to enroll form
+    Click    css=a[href="/memberships/new"]
+    Wait For Elements State    css=h1 >> text=Nova matrícula
     ...    visible    5
