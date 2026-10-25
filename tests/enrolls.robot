@@ -8,6 +8,13 @@ Test Teardown    Take Screenshot
 
 *** Test Cases ***
 Deve poder realziar uma nova adesão
+    ${account}    Create Dictionary
+    ...    name=Thiago Mussolini
+    ...    email=thiago@teste.com
+    ...    cpf=11122233344
+
+    Delete Account By Email    ${account}[email]
+    Insert Account             ${account}
     
     Go to login page
     Submit login form    sac@smartbit.com    pwd123
